@@ -1,0 +1,32 @@
+I:\c#\bank\bank\bin\Debug\bank.exe.config
+I:\c#\bank\bank\bin\Debug\bank.exe
+I:\c#\bank\bank\bin\Debug\bank.pdb
+I:\c#\bank\bank\obj\Debug\bank.csprojResolveAssemblyReference.cache
+I:\c#\bank\bank\obj\Debug\bank.csproj.CoreCompileInputs.cache
+I:\c#\bank\bank\obj\Debug\bank.exe
+I:\c#\bank\bank\obj\Debug\bank.pdb
+G:\bank\bank\obj\Debug\bank.csprojResolveAssemblyReference.cache
+G:\bank\bank\obj\Debug\bank.csproj.CoreCompileInputs.cache
+G:\bank\bank\obj\Debug\bank.exe
+G:\bank\bank\obj\Debug\bank.pdb
+G:\bank\bank\bin\Debug\bank.exe.config
+G:\bank\bank\bin\Debug\bank.exe
+G:\bank\bank\bin\Debug\bank.pdb
+C:\Users\Emilm\Desktop\bank\bank\bin\Debug\bank.exe.config
+C:\Users\Emilm\Desktop\bank\bank\bin\Debug\bank.exe
+C:\Users\Emilm\Desktop\bank\bank\bin\Debug\bank.pdb
+C:\Users\Emilm\Desktop\bank\bank\obj\Debug\bank.csprojResolveAssemblyReference.cache
+C:\Users\Emilm\Desktop\bank\bank\obj\Debug\bank.csproj.CoreCompileInputs.cache
+C:\Users\Emilm\Desktop\bank\bank\obj\Debug\bank.exe
+C:\Users\Emilm\Desktop\bank\bank\obj\Debug\bank.pdb
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\bank.exe.config
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\bank.exe
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\bank.pdb
+C:\Users\Emilm\Google Drive\project\bank\bank\obj\Debug\bank.csprojResolveAssemblyReference.cache
+C:\Users\Emilm\Google Drive\project\bank\bank\obj\Debug\bank.csproj.CoreCompileInputs.cache
+C:\Users\Emilm\Google Drive\project\bank\bank\obj\Debug\bank.exe
+C:\Users\Emilm\Google Drive\project\bank\bank\obj\Debug\bank.pdb
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Data.dll
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Data.xml
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Web.dll
+C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Web.xml
