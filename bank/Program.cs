@@ -57,7 +57,7 @@ namespace bank
                 for (int i = 0; i < 30; i++)
                 {
                     Console.WriteLine(loadingImg[loadingImgPos] + " Loading " + loadingDots[loadingDotsPos]);
-                    System.Threading.Thread.Sleep(150);
+                    Thread.Sleep(150);
                     Console.Clear();
 
                     if (loadingImgPos > 23)
@@ -83,7 +83,7 @@ namespace bank
             catch { }
 
             Console.WriteLine("Files okay");
-            System.Threading.Thread.Sleep(500);
+            Thread.Sleep(500);
             Console.Clear();
             Login();
         }
@@ -153,7 +153,7 @@ namespace bank
             */
         }
 
-        #region Lars
+        #region check
         public bool UserCheck(List<string> user, List<string> password, string userInput, string passInput)
         {
             bool returnvalue = false;
