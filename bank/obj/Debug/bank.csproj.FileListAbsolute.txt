@@ -30,3 +30,7 @@ C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Data.dll
 C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Data.xml
 C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Web.dll
 C:\Users\Emilm\Google Drive\project\bank\bank\bin\Debug\MySql.Web.xml
+C:\Users\Emilm\Desktop\New folder (3)\bank-v.1\bank\obj\Debug\bank.csprojResolveAssemblyReference.cache
+C:\Users\Emilm\Desktop\New folder (3)\bank-v.1\bank\obj\Debug\bank.csproj.CoreCompileInputs.cache
+C:\Users\Emilm\Desktop\New folder (3)\bank-v.1\bank\obj\Debug\bank.exe
+C:\Users\Emilm\Desktop\New folder (3)\bank-v.1\bank\obj\Debug\bank.pdb

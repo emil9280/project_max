@@ -91,19 +91,15 @@ namespace bank
 
 
 
+        private string Brugernavn;
         public void Login()
         {
             Console.WindowHeight = 15;
             Console.WindowWidth = 40;
             int screenHeight = Console.WindowHeight;
             int screenWidth = Console.WindowWidth;
-            string Brugernavn;
-            string BRugernavn = "test";
-            string BrugerNavn;
-            string BRugerNavn = "emil9280";
+            
             string Password;
-            string PAssword = "1234";
-            string PAssWord = "hello";
             int screenheight = Console.WindowHeight;
             int screenwidth = Console.WindowWidth;
 
@@ -112,12 +108,12 @@ namespace bank
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             Screen1();
-            Console.WriteLine("#    Welcome to Bank Of TechCollege");
+            Console.WriteLine("     Welcome to Bank Of TechCollege");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
-            Console.WriteLine("#      press any button to login       #");
+            Console.WriteLine("       press any button to login");
             Screen2();
             Console.ReadKey();
             Console.Clear();
@@ -128,40 +124,35 @@ namespace bank
             Brugernavn = Console.ReadLine();
             Console.Write("password: ");
             Password = Console.ReadLine();
-            #region Lars
+            #region connect
             MySQLConnect mysql = new MySQLConnect();
             List<string>[] list = mysql.SelectLogin();
             if (UserCheck(list[0], list[1], Brugernavn, Password))
             {
                 Console.WriteLine("You have logged in");
-                Thread.Sleep(10000);
-                //you have loged in
+                Thread.Sleep(1000);
+                Console.Clear();
+                Menu();
+
             }
             else
             {
                 Console.WriteLine("Login or password was incorrect");
                 Thread.Sleep(5000);
-                //password or username was wrong
+
             }
-            #endregion
-            /*
-            string MyconnectionString = "Server=localhost:3306;Database=users;uid=" + Brugernavn + ";pwd=" + Password + ";";
-            MySqlConnection connection = new MySqlConnection(MyconnectionString);
-            connection.Open();
-            Console.WriteLine("Hello " + Brugernavn);
-            Thread.Sleep(500);
-            */
+            #endregion            
         }
 
-        #region check
+        #region check connection
         public bool UserCheck(List<string> user, List<string> password, string userInput, string passInput)
         {
             bool returnvalue = false;
-            for(int i = 0; i < user.Count; i++)
+            for (int i = 0; i < user.Count; i++)
             {
-                if(user[i] == userInput)
+                if (user[i] == userInput)
                 {
-                    if(password[i] == passInput)
+                    if (password[i] == passInput)
                     {
                         returnvalue = true;
                     }
@@ -176,28 +167,43 @@ namespace bank
         public void Menu()
         {
             string resultat;
-            int resultat2;
 
             try
             {
-                Console.WriteLine("Please choose where to go to");
+                Console.WriteLine("Please choose where to go");
                 Console.WriteLine("");
                 Console.WriteLine("press 1 for account");
                 Console.WriteLine("press 2 for transfere");
                 resultat = Console.ReadLine();
-                resultat2 = Convert.ToInt16(resultat);
-                if (resultat2 == 1)
+                try
                 {
-                    Console.Clear();
-                    Account();
-                }
-                else
-                {
-                    if (resultat2 == 2)
+                    switch (resultat)
                     {
-                        Console.Clear();
-                        Transfere();
+                        case "1":
+                            Console.Clear();
+                            Account();
+                            break;
+
+                        case "2":
+                            Console.Clear();
+                            Transfere();
+                            break;
+
+                        default:
+                            Console.Clear();
+                            Screen1();
+                            Console.WriteLine("          wrong input try again");
+                            Console.WriteLine("          press any key to try again");
+                            Screen2();
+                            Console.ReadKey();
+                            Console.Clear();
+                            Menu();
+                            break;
                     }
+                }
+                catch
+                {
+
                 }
             }
             catch
@@ -210,18 +216,134 @@ namespace bank
 
         public void Account()
         {
-            Console.WriteLine("hello");
+            double balance = 0;
+            double balance2 = 0;
+            int accounts = 0;
+            string resultat;
+            MySQlbalance mysql = new MySQlbalance();
+            List<string>[] list = mysql.balanc();
+            balancecheck(list[0], Brugernavn);
+
+            Screen1();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("             1. account: " + balance);
+            if (accounts == 1)
+            {
+                Console.WriteLine("             2. account: " + balance2);
+            }
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("       press 1 to enter transfere");
+            Console.WriteLine("       press 2 to exit");
+            Screen2();
+            Console.WriteLine(" ");
+            resultat = Console.ReadLine();
+            switch (resultat)
+            {
+                case "1":
+                    Console.Clear();
+                    Transfere();
+                    break;
+
+                case "2":
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    Console.Clear();
+                    Screen1();
+                    Console.WriteLine("           error wrong input");
+                    Screen2();
+                    Console.ReadKey();
+                    Console.Clear();
+                    Account();
+                    break;
+
+            }
             Console.ReadKey();
         }
+
+        public double balancecheck(List<string> user, List<string> bruger2, List<string> balance, List<string> balance2, List<string> accounts)
+        {
+            List<string> bruger2 = ;
+            double returnvaule = 500;
+            for (int i = 0; i < user.Count; i++)
+            {
+                if (user == bruger2)
+                {
+                    returnvaule = 1000;
+                }
+            }
+            return returnvaule;
+        }
+        
 
 
 
 
         public void Transfere()
         {
-            Console.WriteLine("hello2");
+            int accounts = 0;
+            
+            Screen1();
+            Console.WriteLine("    choose account to transfer from");
+            Console.WriteLine("           1. for account 1");
+            if (accounts == 1)                
+            {
+                Console.WriteLine("           2. for account 2");
+                Screen2();
+                Thread.Sleep(5000);
+                transfere2();
+            }
+            Screen2();
+            Thread.Sleep(5000);
+            transfere2();
+        }
+        private void transfere2()
+        {
+            string resultat;            
+            Console.WriteLine(" ");
+            resultat = Console.ReadLine();
+            Console.Clear();
+            switch (resultat)
+            {
+                case "1":
+                    Console.WriteLine("      you have choosen account 1");
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    account1();
+                    break;
+
+                case "2":
+                    Console.WriteLine("     you have choosen account 2");
+                    Console.Clear();
+                    Thread.Sleep(3000);
+                    account2();
+                    break;
+
+                default:
+                    Console.WriteLine("wrong input try again");
+                    Console.ReadKey();
+                    Transfere();
+                    break;
+            }
+
+        }
+          private void account1()
+          {
+            Console.WriteLine("hello account 1");
+            Console.ReadKey();
+                
+          }
+
+        private void account2()
+        {
+            Console.WriteLine("hello account 2");
             Console.ReadKey();
         }
+
 
 
 
